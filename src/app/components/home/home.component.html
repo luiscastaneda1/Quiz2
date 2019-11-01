@@ -1,0 +1,16 @@
+
+<div class= "homeTitulo">
+    <h1>Películas</h1>
+</div> <hr style="color: white; background-color: white; height: 2px;">
+
+    <div class="elemento" *ngFor="let item of movies">
+        
+        <div class= "portada">
+            <img src= {{item.Poster}} width= "220">
+        </div>
+        
+        <div class= "movieTitulo">
+            <h2>{{item.Title}}</h2>
+        </div>
+    
+    </div>
