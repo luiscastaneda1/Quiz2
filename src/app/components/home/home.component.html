@@ -15,7 +15,7 @@
             </div>
             
             <div class= "descripcion">
-                <a [routerLink]="['/movie', item.Id ]" >{{item.Title}}</a>
+                <h2 [routerLink]="['/movie', item.Id ]" style= "text-decoration: none; cursor: pointer;">{{item.Title}}</h2>
                  
                 <h5>{{item.Genre}}</h5> 
                 
@@ -29,7 +29,7 @@
             <h1>Próximos Estrenos</h1>
     </div> 
 
-    <hr style="color: white; background-color: white; height: 2px;">
+<hr style="color: white; background-color: white; height: 2px;">
 
     <div  *ngFor="let item of movies">
 
@@ -42,7 +42,7 @@
                 <div class= "descripcion">
                     <h2>{{item.Title}}</h2>
                     
-                    <h3>{{item.Genre}}</h3> 
+                    <h5>{{item.Genre}}</h5> 
                     
                     <h6>{{item.Language}}</h6>
                 </div>
