@@ -1,0 +1,32 @@
+.navbar {
+    width: 100vw;
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: bold;
+    justify-content: center;
+    position: fixed;
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+    }
+
+    li {
+        float: left;
+
+        a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        &:hover {
+            background-color: rgb(200, 14, 22);
+        }
+    }
+}

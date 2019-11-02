@@ -1,16 +1,51 @@
+<app-nav-bar></app-nav-bar><br><br>
 
-<div class= "homeTitulo">
-    <h1>Películas</h1>
-</div> <hr style="color: white; background-color: white; height: 2px;">
+    <div class= "homeTitulo">
+        <h1>Películas</h1>
+    </div> 
 
-    <div class="elemento" *ngFor="let item of movies">
-        
-        <div class= "portada">
-            <img src= {{item.Poster}} width= "220">
-        </div>
-        
-        <div class= "movieTitulo">
-            <h2>{{item.Title}}</h2>
+<hr style="color: white; background-color: white; height: 2px;">
+
+    <div  *ngFor="let item of movies">
+
+        <div class="elemento" *ngIf="item.Available">
+
+            <div class= "portada">
+                <img src= {{item.Poster}} width= "220">
+            </div>
+            
+            <div class= "descripcion">
+                <a [routerLink]="['/movie', item.Id ]" >{{item.Title}}</a>
+                 
+                <h5>{{item.Genre}}</h5> 
+                
+                <h6>{{item.Language}}</h6>
+            </div>
         </div>
     
     </div>
+
+    <div class= "homeTitulo">
+            <h1>Próximos Estrenos</h1>
+    </div> 
+
+    <hr style="color: white; background-color: white; height: 2px;">
+
+    <div  *ngFor="let item of movies">
+
+            <div class="elemento" *ngIf="item.ComingSoon">
+                
+                <div class= "portada">
+                    <img src= {{item.Poster}} width= "220">
+                </div>
+                
+                <div class= "descripcion">
+                    <h2>{{item.Title}}</h2>
+                    
+                    <h3>{{item.Genre}}</h3> 
+                    
+                    <h6>{{item.Language}}</h6>
+                </div>
+            </div>
+        
+        </div>
